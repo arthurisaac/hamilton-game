@@ -1,13 +1,25 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';
 
-enum Level { Hard, Medium, Easy }
+// enum Level { Hard, Medium, Easy }
+enum Level { Medium }
 
 List<String> fillSourceArray() {
   return [
-    'assets/animalspics/dino.png',
-    'assets/animalspics/dino.png',
-    'assets/animalspics/wolf.png',
+    'assets/hamilton/hamilton.png',
+    'assets/hamilton/hamilton.png',
+    'assets/hamilton/HAMILTON_CLASSIC.png',
+    'assets/hamilton/HAMILTON_CLASSIC.png',
+    'assets/hamilton/HAMILTON_LIGHT.png',
+    'assets/hamilton/HAMILTON_LIGHT.png',
+    'assets/hamilton/4 tiges.png',
+    'assets/hamilton/4 tiges.png',
+    'assets/hamilton/two_hamilton_boxes.png',
+    'assets/hamilton/two_hamilton_boxes.png',
+    'assets/hamilton/white_hamilton.png',
+    'assets/hamilton/white_hamilton.png',
+
+    /*'assets/animalspics/wolf.png',
     'assets/animalspics/wolf.png',
     'assets/animalspics/peacock.png',
     'assets/animalspics/peacock.png',
@@ -20,7 +32,7 @@ List<String> fillSourceArray() {
     'assets/animalspics/frog.png',
     'assets/animalspics/frog.png',
     'assets/animalspics/seahorse.png',
-    'assets/animalspics/seahorse.png',
+    'assets/animalspics/seahorse.png',*/
     'assets/animalspics/girraf.png',
     'assets/animalspics/girraf.png',
   ];
@@ -31,7 +43,7 @@ List getSourceArray(
 ) {
   List<String> levelAndKindList = new List<String>();
   List sourceArray = fillSourceArray();
-  if (level == Level.Hard) {
+  /*if (level == Level.Hard) {
     sourceArray.forEach((element) {
       levelAndKindList.add(element);
     });
@@ -43,6 +55,9 @@ List getSourceArray(
     for (int i = 0; i < 6; i++) {
       levelAndKindList.add(sourceArray[i]);
     }
+  }*/
+  for (int i = 0; i < 12; i++) {
+    levelAndKindList.add(sourceArray[i]);
   }
 
   levelAndKindList.shuffle();
@@ -51,7 +66,7 @@ List getSourceArray(
 
 List<bool> getInitialItemState(Level level) {
   List<bool> initialItemState = new List<bool>();
-  if (level == Level.Hard) {
+  /*if (level == Level.Hard) {
     for (int i = 0; i < 18; i++) {
       initialItemState.add(true);
     }
@@ -63,6 +78,9 @@ List<bool> getInitialItemState(Level level) {
     for (int i = 0; i < 6; i++) {
       initialItemState.add(true);
     }
+  }*/
+  for (int i = 0; i < 12; i++) {
+    initialItemState.add(true);
   }
   return initialItemState;
 }
@@ -70,7 +88,7 @@ List<bool> getInitialItemState(Level level) {
 List<GlobalKey<FlipCardState>> getCardStateKeys(Level level) {
   List<GlobalKey<FlipCardState>> cardStateKeys =
       new List<GlobalKey<FlipCardState>>();
-  if (level == Level.Hard) {
+  /*if (level == Level.Hard) {
     for (int i = 0; i < 18; i++) {
       cardStateKeys.add(GlobalKey<FlipCardState>());
     }
@@ -82,6 +100,9 @@ List<GlobalKey<FlipCardState>> getCardStateKeys(Level level) {
     for (int i = 0; i < 6; i++) {
       cardStateKeys.add(GlobalKey<FlipCardState>());
     }
+  }*/
+  for (int i = 0; i < 12; i++) {
+    cardStateKeys.add(GlobalKey<FlipCardState>());
   }
   return cardStateKeys;
 }
